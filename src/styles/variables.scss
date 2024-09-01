@@ -1,0 +1,46 @@
+$color-primary: #38bdf7;
+$color-secondary: #ff00b8;
+$color-tertiary: #8f4ff8;
+$color-light: #f5fffa;
+$color-dark: #27292a;
+$color-orange: #ff7b02;
+$color-warning: #faec59;
+$color-danger: #f93a3a;
+$color-success: #3cee43;
+$color-sliver: #eeeeee;
+$color-gray: #b2b2b2;
+
+$colors: (
+  primary: #38bdf7,
+  secondary: #8f4ff8,
+  tertiary: #ff00b8,
+  dark: #27292a,
+  light: #f5fffa,
+  default: #ffffff,
+  success: #3cee43,
+  danger: #f93a3a,
+  warning: #faec59,
+  orange: #ff7b02,
+  sliver: #eeeeee,
+  gray: #b2b2b2
+);
+
+$font-xs: 0.625rem;
+$font-s: 0.75rem;
+$font-md: 0.875rem;
+$font-lg: 1rem;
+$font-xl: 1.125rem;
+$font-2xl: 1.25rem;
+$font-3xl: 1.5rem;
+$font-4xl: 2rem;
+$font-5xl: 2.5rem;
+$font-6xl: 3rem;
+$font-7xl: 3.438rem;
+$font-8xl: 4rem;
+$font-9xl: 8rem;
+
+$rounded-xs: 4px;
+$rounded-sm: 5px;
+$rounded-md: 10px;
+$rounded-lg: 15px;
+$rounded-xl: 20px;
