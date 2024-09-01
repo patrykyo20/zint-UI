@@ -1,0 +1,53 @@
+@import "../../styles/variables.scss";
+
+$buttonVariants: primary, secondary, tertiary, dark, light, default, success, danger, warning;
+
+.button {
+  border-radius: $rounded-xs;
+  padding: 10px 35px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button--small {
+  font-size: $font-lg;
+}
+
+.button--medium {
+  font-size: $font-2xl;
+}
+
+.button--large {
+  font-size: $font-3xl;
+}
+
+@each $variant in $buttonVariants {
+  .button--#{$variant} {
+    background-color: map-get($colors, $variant);
+    @if $variant == light {
+      color: map-get($colors, dark);
+      box-shadow: 1px 1px 4px color-mix(in srgb, map-get($colors, dark), transparent 75%);
+    } @else {
+      color: map-get($colors, light);
+      box-shadow: 1px 1px 4px color-mix(in srgb, map-get($colors, $variant), transparent 75%);
+    }
+    
+    &:hover {
+      @if $variant == light {
+        box-shadow: 1px 1px 8px color-mix(in srgb, map-get($colors, dark), transparent 50%);
+      } @else {
+        box-shadow: 1px 1px 8px color-mix(in srgb, map-get($colors, $variant), transparent 50%);
+      }
+    }
+
+    &:focus {
+      @if $variant == light {
+        outline: 2px solid color-mix(in srgb, map-get($colors, dark), transparent 50%);
+      } @else {
+        outline: 2px solid color-mix(in srgb, map-get($colors, $variant), transparent 50%);
+      }
+    }
+  }
+}
