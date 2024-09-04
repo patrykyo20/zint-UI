@@ -1,0 +1,27 @@
+@import '../../styles/variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+$typography-size: xs, sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl, 8xl, 9xl;
+$typography-weight: thin, normal, bold;
+
+.typography {
+  font-family: "Oxygen", sans-serif;
+}
+
+@each $variant in $variants {
+  .typography--#{$variant} {
+    color: map-get($colors, $variant);
+  }
+}
+
+@each $size in $typography-size {
+  .typography--#{$size} {
+    font-size: map-get($font-size, $size);
+  }
+}
+
+@each $weight in $typography-weight {
+  .typography--#{$weight} {
+    font-weight: map-get($font-weight, $weight);
+  }
+}
