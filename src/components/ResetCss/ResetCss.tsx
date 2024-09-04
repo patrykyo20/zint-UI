@@ -1,7 +1,7 @@
-import "./reset-css.css";
+import "./reset-css.scss";
 
 const ResetCss = () => {
-  return <div></div>;
+  return <></>;
 };
 
 export default ResetCss;
