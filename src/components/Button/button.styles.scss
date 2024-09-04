@@ -1,6 +1,5 @@
 @import "../../styles/variables.scss";
 
-$buttonVariants: primary, secondary, tertiary, dark, light, default, success, danger, warning;
 
 .button {
   border-radius: $rounded-xs;
@@ -23,7 +22,7 @@ $buttonVariants: primary, secondary, tertiary, dark, light, default, success, da
   font-size: $font-3xl;
 }
 
-@each $variant in $buttonVariants {
+@each $variant in $variants {
   .button--#{$variant} {
     background-color: map-get($colors, $variant);
     @if $variant == light {
