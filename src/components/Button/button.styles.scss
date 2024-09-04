@@ -10,6 +10,15 @@
   transition: 0.3s;
 }
 
+.button:disabled {
+  cursor: not-allowed;
+}
+
+.button:disabled:hover {
+  box-shadow: none;
+  filter: brightness(90%);
+}
+
 .button--small {
   font-size: $font-lg;
 }
@@ -39,6 +48,7 @@
       } @else {
         box-shadow: 1px 1px 8px color-mix(in srgb, map-get($colors, $variant), transparent 50%);
       }
+      filter: brightness(105%);
     }
 
     &:focus {
