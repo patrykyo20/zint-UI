@@ -26,7 +26,7 @@ $colors: (
 );
 
 $font-xs: 0.625rem;
-$font-s: 0.75rem;
+$font-sm: 0.75rem;
 $font-md: 0.875rem;
 $font-lg: 1rem;
 $font-xl: 1.125rem;
@@ -44,3 +44,5 @@ $rounded-sm: 5px;
 $rounded-md: 10px;
 $rounded-lg: 15px;
 $rounded-xl: 20px;
+
+$variants: primary, secondary, tertiary, dark, light, default, success, danger, warning;
