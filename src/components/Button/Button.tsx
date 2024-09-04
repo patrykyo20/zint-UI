@@ -5,7 +5,7 @@ import IButton from "./Button.types";
 
 const Button: FC<IButton> = ({
   children,
-  variant = "default",
+  variant = "primary",
   size = "medium",
   className,
   ...props
