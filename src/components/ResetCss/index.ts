@@ -1,1 +1,1 @@
-export { default as Button } from './ResetCss.tsx';
+export { default as ResetCss } from './ResetCss.tsx';
