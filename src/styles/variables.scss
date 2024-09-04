@@ -39,6 +39,32 @@ $font-7xl: 3.438rem;
 $font-8xl: 4rem;
 $font-9xl: 8rem;
 
+$font-size: (
+  xs: 0.625rem,
+  sm: 0.75rem,
+  md: 0.875rem,
+  lg: 1rem,
+  xl: 1.125rem,
+  2xl: 1.25rem,
+  3xl: 1.5rem,
+  4xl: 2rem,
+  5xl: 2.5rem,
+  6xl: 3rem,
+  7xl: 3.438rem,
+  8xl: 4rem,
+  9xl: 8rem,
+);
+
+$font-thin: 300;
+$font-normal: 400;
+$font-bold: 700;
+
+$font-weight: (
+  thin: 300,
+  normal: 400,
+  bold: 700,
+);
+
 $rounded-xs: 4px;
 $rounded-sm: 5px;
 $rounded-md: 10px;
