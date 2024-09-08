@@ -1,28 +1,27 @@
 $color-primary: #38bdf7;
-$color-secondary: #ff00b8;
-$color-tertiary: #8f4ff8;
+$color-secondary: #8f4ff8;
+$color-tertiary: #ff00b8;
 $color-light: #f5fffa;
 $color-dark: #27292a;
-$color-orange: #ff7b02;
-$color-warning: #faec59;
-$color-danger: #f93a3a;
 $color-success: #3cee43;
-$color-sliver: #eeeeee;
-$color-gray: #b2b2b2;
+$color-danger: #f93a3a;
+$color-warning: #faec59;
+$color-orange: #ff7b02;
+$color-silver: #eeeeee;
+$color-default: #b2b2b2;
 
 $colors: (
-  primary: #38bdf7,
-  secondary: #8f4ff8,
-  tertiary: #ff00b8,
-  dark: #27292a,
-  light: #f5fffa,
-  default: #ffffff,
-  success: #3cee43,
-  danger: #f93a3a,
-  warning: #faec59,
-  orange: #ff7b02,
-  sliver: #eeeeee,
-  gray: #b2b2b2
+  primary: $color-primary,
+  secondary: $color-secondary,
+  tertiary: $color-tertiary,
+  light: $color-light,
+  dark: $color-dark,
+  success: $color-success,
+  danger: $color-danger,
+  warning: $color-warning,
+  orange: $color-orange,
+  silver: $color-silver,
+  default: $color-default
 );
 
 $font-xs: 0.625rem;
@@ -40,19 +39,19 @@ $font-8xl: 4rem;
 $font-9xl: 8rem;
 
 $font-size: (
-  xs: 0.625rem,
-  sm: 0.75rem,
-  md: 0.875rem,
-  lg: 1rem,
-  xl: 1.125rem,
-  2xl: 1.25rem,
-  3xl: 1.5rem,
-  4xl: 2rem,
-  5xl: 2.5rem,
-  6xl: 3rem,
-  7xl: 3.438rem,
-  8xl: 4rem,
-  9xl: 8rem,
+  xs: $font-xs,
+  sm: $font-sm,
+  md: $font-md,
+  lg: $font-lg,
+  xl: $font-xl,
+  2xl: $font-2xl,
+  3xl: $font-3xl,
+  4xl: $font-4xl,
+  5xl: $font-5xl,
+  6xl: $font-6xl,
+  7xl: $font-7xl,
+  8xl: $font-8xl,
+  9xl: $font-9xl,
 );
 
 $font-thin: 300;
@@ -65,10 +64,25 @@ $font-weight: (
   bold: 700,
 );
 
+$font-size-variants: (
+  sm: $font-2xl,
+  md: $font-3xl,
+  lg: $font-4xl,
+);
+
 $rounded-xs: 4px;
 $rounded-sm: 5px;
 $rounded-md: 10px;
 $rounded-lg: 15px;
 $rounded-xl: 20px;
 
+$rounded: (
+  xs: $rounded-xs,
+  sm: $rounded-sm,
+  md: $rounded-md,
+  lg: $rounded-lg,
+  xl: $rounded-xl,
+);
+
 $variants: primary, secondary, tertiary, dark, light, default, success, danger, warning;
+$sizes: sm, md, lg
