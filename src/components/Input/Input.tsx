@@ -7,6 +7,7 @@ const Input: FC<IInput> = ({
   type = "text",
   size = "md",
   rounded = "none",
+  className,
   label,
   ...props
 }) => {
@@ -15,7 +16,7 @@ const Input: FC<IInput> = ({
       <>
         <label
           htmlFor={props.name}
-          className={`input__label input__label--${variant} input--rounded-${rounded} input--${size}`}
+          className={`input__label input__label--${variant} input--rounded-${rounded} input--${size} ${className ?? className}`}
         >
           Coose file
         <input type="file" {...props} className="input"></input>
@@ -25,11 +26,11 @@ const Input: FC<IInput> = ({
   } else if (label) {
     return (
       <label className="label__field">
-        {!props.disabled && <span>{label}</span>}
+        {!props.disabled && <span className={`label--${variant}`}>{label}</span>}
         <input
           type={type}
           {...props}
-          className={`input input--${variant} input--${size} input--rounded-${rounded}`}
+          className={`input input--${variant} input--${size} input--rounded-${rounded} ${className ?? className}`}
         ></input>
       </label>
     );
@@ -38,7 +39,7 @@ const Input: FC<IInput> = ({
       <input
         type={type}
         {...props}
-        className={`input input--${variant} input--${size} input--rounded-${rounded}`}
+        className={`input input--${variant} input--${size} input--rounded-${rounded} ${className ?? className}`}
       ></input>
     );
   }
