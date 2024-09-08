@@ -1,6 +1,7 @@
 import { InputHTMLAttributes } from "react";
 import TRounded from "../../types/TRounded";
 import TVariant from "../../types/TVariants";
+import IBasic from "../../types/IBasic";
 
 export type OInputElements =
   | "alt"
@@ -36,9 +37,8 @@ export type TInput =
   | "textarea";
 
 interface IInput
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, OInputElements> {
+  extends Omit<InputHTMLAttributes<HTMLInputElement>, OInputElements>, IBasic {
   type?: TInput;
-  className?: string;
   variant?: TVariant;
   label?: string;
   size?: "sm" | "md" | "lg";
