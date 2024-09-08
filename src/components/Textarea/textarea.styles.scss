@@ -1,0 +1,56 @@
+@import "../../styles/variables.scss";
+
+$roundedVariants: none, xs, sm, md, lg, xl;
+
+.textarea {
+  font-family: "Oxygen", sans-serif;
+  padding: 15px 15px;
+  font-size: 10px;
+  transition: 0.1s;
+  min-width: 277px;
+  min-height: 10rem;
+}
+
+.textarea::placeholder {
+  color: $color-default;
+}
+
+.textarea:disabled {
+  background-color: $color-silver;
+}
+
+@each $variant in $variants {
+  .textarea--#{$variant} {
+    color: $color-dark;
+    border: 2px solid map-get($colors, $variant);
+    box-shadow: 1px
+      1px
+      4px
+      color-mix(in srgb, map-get($colors, $variant), transparent 75%);
+
+    &:hover {
+      box-shadow: 1px
+        1px
+        4px
+        color-mix(in srgb, map-get($colors, $variant), transparent 50%);
+    }
+
+    &:focus {
+      outline: 1px solid map-get($colors, $variant);
+    }
+  }
+}
+
+@each $roundedVariant in $roundedVariants {
+  @if $rounded != none {
+    .textarea--rounded-#{$roundedVariant} {
+      border-radius: map-get($rounded, $roundedVariant);
+    }
+  }
+}
+
+@each $size in $sizes {
+  .textarea--#{$size} {
+    font-size: map-get($font-size-variants, $size);
+  }
+}
