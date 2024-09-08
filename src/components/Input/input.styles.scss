@@ -8,7 +8,7 @@ $roundedVariants: none, xs, sm, md, lg, xl;
 
 .input {
   font-family: "Oxygen", sans-serif;
-  padding: 20px 15px;
+  padding: 15px 15px;
   font-size: 10px;
   transition: 0.3s;
 }
@@ -67,7 +67,6 @@ $roundedVariants: none, xs, sm, md, lg, xl;
     font-family: "Oxygen", sans-serif;
     border: 2px solid map-get($colors, $variant);
     color: map-get($colors, $variant);
-    padding: 7px 10px;
     box-shadow: 1px
       1px
       6px
