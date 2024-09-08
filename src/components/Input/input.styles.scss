@@ -1,0 +1,100 @@
+@import "../../styles/variables.scss";
+
+$roundedVariants: none, xs, sm, md, lg, xl;
+
+.input[type="file"] {
+  display: none;
+}
+
+.input {
+  font-family: "Oxygen", sans-serif;
+  padding: 20px 15px;
+  font-size: 10px;
+  transition: 0.3s;
+}
+
+.input::placeholder {
+  color: $color-default;
+}
+
+.input:disabled {
+  background-color: $color-silver;
+}
+
+.label__field {
+  font-family: "Oxygen", sans-serif;
+  display: flex;
+  flex-direction: column;
+  max-width: 365px;
+  font-size: 16px;
+  position: relative;
+  margin-top: 200px;
+
+  & > span {
+    position: absolute;
+    background-color: white;
+    left: .5rem;
+    top: -0.5rem;
+    padding-left: .4rem;
+    padding-right: .4rem;
+    transition: 0.3s;
+  }
+}
+
+@each $variant in $variants {
+  .input--#{$variant} {
+    color: $color-dark;
+    border: 2px solid map-get($colors, $variant);
+    box-shadow: 1px
+      1px
+      4px
+      color-mix(in srgb, map-get($colors, $variant), transparent 75%);
+
+    &:hover {
+      box-shadow: 1px
+        1px
+        4px
+        color-mix(in srgb, map-get($colors, $variant), transparent 50%);
+    }
+
+    &:focus {
+      outline: 1px solid map-get($colors, $variant);
+    }
+  }
+
+  .input__label--#{$variant} {
+    display: inline-block;
+    font-family: "Oxygen", sans-serif;
+    border: 2px solid map-get($colors, $variant);
+    color: map-get($colors, $variant);
+    padding: 7px 10px;
+    box-shadow: 1px
+      1px
+      6px
+      color-mix(in srgb, map-get($colors, $variant), transparent 75%);
+    transition: 0.3s;
+    font-size: 10px;
+  }
+
+  .input__label--#{$variant}:hover {
+    cursor: pointer;
+    box-shadow: 1px
+      1px
+      4px
+      color-mix(in srgb, map-get($colors, $variant), transparent 50%);
+  }
+}
+
+@each $roundedVariant in $roundedVariants {
+  @if $rounded != none {
+    .input--rounded-#{$roundedVariant} {
+      border-radius: map-get($rounded, $roundedVariant);
+    }
+  }
+}
+
+@each $size in $sizes {
+  .input--#{$size} {
+    font-size: map-get($font-size-variants, $size);
+  }
+}
