@@ -64,6 +64,7 @@ $roundedVariants: none, xs, sm, md, lg, xl;
 
   .input__label--#{$variant} {
     display: inline-block;
+    padding: 15px 20px;
     font-family: "Oxygen", sans-serif;
     border: 2px solid map-get($colors, $variant);
     color: map-get($colors, $variant);
