@@ -26,9 +26,8 @@ $roundedVariants: none, xs, sm, md, lg, xl;
   display: flex;
   flex-direction: column;
   max-width: 365px;
-  font-size: 16px;
+  font-size: 20px;
   position: relative;
-  margin-top: 200px;
 
   & > span {
     position: absolute;
@@ -42,6 +41,10 @@ $roundedVariants: none, xs, sm, md, lg, xl;
 }
 
 @each $variant in $variants {
+  .label--#{$variant} {
+    color: map-get($colors, $variant);
+  }
+
   .input--#{$variant} {
     color: $color-dark;
     border: 2px solid map-get($colors, $variant);
