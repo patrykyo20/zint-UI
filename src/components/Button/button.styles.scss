@@ -1,6 +1,5 @@
 @import "../../styles/variables.scss";
 
-
 .button {
   border-radius: $rounded-xs;
   padding: 10px 35px;
@@ -19,16 +18,10 @@
   filter: brightness(90%);
 }
 
-.button--sm {
-  font-size: $font-lg;
-}
-
-.button--md {
-  font-size: $font-2xl;
-}
-
-.button--lg {
-  font-size: $font-3xl;
+@each $size in $sizes {
+  .button--#{$size} {
+    font-size: map-get($font-size-variants, $size);
+  }
 }
 
 @each $variant in $variants {
