@@ -10,6 +10,7 @@ const Image: FC<IImage> = ({
   height,
   className,
   testId,
+  ...props
 }) => {
   return (
     <img
@@ -19,6 +20,7 @@ const Image: FC<IImage> = ({
       height={height}
       className={`${responsive && "responsive"} ${className}`}
       data-testid={testId}
+      {...props}
     />
   );
 };
