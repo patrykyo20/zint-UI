@@ -8,10 +8,17 @@ const Button: FC<IButton> = ({
   variant = "primary",
   size = "md",
   className,
+  testId,
   ...props
 }) => {
   return (
-    <button className={`button button--${variant} button--${size} ${className ?? className}`} {...props}>
+    <button
+      data-testid={testId}
+      className={`button button--${variant} button--${size} ${
+        className ?? className
+      }`}
+      {...props}
+    >
       {children}
     </button>
   );
