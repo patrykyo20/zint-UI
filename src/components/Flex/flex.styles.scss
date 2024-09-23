@@ -1,0 +1,57 @@
+@import "../../styles/variables.scss";
+
+.flex {
+  display: flex;
+}
+
+$flex-directions: row, row-reverse, column, column-reverse;
+$wraps: nowrap, wrap, wrap-reverse;
+$justify-contents: flex-start, flex-end, center, space-between, space-around, space-evenly, start, end, left, right;
+$align-items: stretch, flex-start, flex-end, center, baseline, start, end, self-start, self-end;
+$align-contents: stretch, flex-start, flex-end, center, space-between, space-around, start, end;
+$align-selfs: auto, flex-start, flex-end, center, baseline, stretch, start, end, self-start, self-end;
+
+$flex-grow-values: (
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5
+);
+
+$flex-shrink-values: (
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3
+);
+
+@mixin generate-flex-classes($property, $values) {
+  @if type-of($values) == 'list' {
+    @each $value in $values {
+      .#{$property}--#{$value} {
+        #{$property}: #{$value};
+      }
+    }
+  } @else if type-of($values) == 'map' {
+    @each $key, $value in $values {
+      .#{$property}--#{$key} {
+        #{$property}: #{$value};
+      }
+    }
+  } @else {
+    @warn "Invalid type for $values in generate-flex-classes";
+  }
+}
+
+
+@include generate-flex-classes(flex-direction, $flex-directions);
+@include generate-flex-classes(flex-wrap, $wraps);
+@include generate-flex-classes(justify-content, $justify-contents);
+@include generate-flex-classes(align-items, $align-items);
+@include generate-flex-classes(align-content, $align-contents);
+@include generate-flex-classes(align-self, $align-selfs);
+@include generate-flex-classes(gap, $main-values);
+@include generate-flex-classes(flex-grow, $flex-grow-values);
+@include generate-flex-classes(flex-shrink, $flex-shrink-values);
