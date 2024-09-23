@@ -5,3 +5,4 @@ export * from "./components/Input";
 export * from "./components/Textarea";
 export * from "./components/Image";
 export * from "./components/Breadcrumbs";
+export * from "./components/Flex";
