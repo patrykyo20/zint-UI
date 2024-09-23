@@ -18,7 +18,7 @@ const Input: FC<IInput> = ({
           htmlFor={props.name}
           className={`input__label input__label--${variant} input--rounded-${rounded} input--${size} ${className ?? className}`}
         >
-          Coose file
+          Choose file
         <input type="file" {...props} className="input"></input>
         </label>
       </>
