@@ -1,19 +1,19 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { Button } from "../components/Button";
 import TVariant from "../types/TVariants";
 import TRounded from "../types/TRounded";
-import IButton from "../components/Button/Button.types";
+import IInput, { TInput } from "../components/Input/Input.types";
+import { Input } from "../components/Input";
 
 const meta = {
-  title: "Example/Button",
-  component: Button,
+  title: "Example/Input",
+  component: Input,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
   args: { onClick: fn() },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof Input>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -22,21 +22,24 @@ type Story = StoryObj<typeof meta>;
 const createVariantStory = (variant: TVariant): Story => ({
   args: {
     variant,
-    children: "Button",
   },
 });
 
-const createSizeStory = (size: IButton["size"]): Story => ({
+const createSizeStory = (size: IInput["size"]): Story => ({
   args: {
     size,
-    children: "Button",
   },
 });
 
 const createRoundedStory = (rounded: TRounded): Story => ({
   args: {
     rounded,
-    children: "Button",
+  },
+});
+
+const createTypeStory = (type: TInput): Story => ({
+  args: {
+    type,
   },
 });
 
@@ -60,3 +63,19 @@ export const SmallRounded = createRoundedStory("sm");
 export const MediumRounded = createRoundedStory("md");
 export const LargeRounded = createRoundedStory("lg");
 export const XLargeRounded = createRoundedStory("xl");
+
+export const Text = createTypeStory("text");
+export const Color = createTypeStory("color");
+export const Date = createTypeStory("date");
+export const DateTimeLocal = createTypeStory("datetime-local");
+export const Email = createTypeStory("email");
+export const File = createTypeStory("file");
+export const Hidden = createTypeStory("hidden");
+export const Month = createTypeStory("month");
+export const Number = createTypeStory("number");
+export const Password = createTypeStory("password");
+export const Search = createTypeStory("search");
+export const Tel = createTypeStory("tel");
+export const Time = createTypeStory("time");
+export const Url = createTypeStory("url");
+export const Week = createTypeStory("week");

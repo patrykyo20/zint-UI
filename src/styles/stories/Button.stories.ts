@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { Button } from "../components/Button";
-import TVariant from "../types/TVariants";
-import TRounded from "../types/TRounded";
-import IButton from "../components/Button/Button.types";
+import { Button } from "../../components/Button";
+import TVariant from "../../types/TVariants";
+import TRounded from "../../types/TRounded";
+import IButton from "../../components/Button/Button.types";
 
 const meta = {
   title: "Example/Button",

@@ -1,19 +1,19 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { Button } from "../components/Button";
+import { Textarea } from "../components/Textarea";
 import TVariant from "../types/TVariants";
 import TRounded from "../types/TRounded";
-import IButton from "../components/Button/Button.types";
+import ITextarea from "../components/Textarea/Textarea.types";
 
 const meta = {
-  title: "Example/Button",
-  component: Button,
+  title: "Example/TextArea",
+  component: Textarea,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
   args: { onClick: fn() },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof Textarea>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -22,21 +22,21 @@ type Story = StoryObj<typeof meta>;
 const createVariantStory = (variant: TVariant): Story => ({
   args: {
     variant,
-    children: "Button",
+    children: "TextArea",
   },
 });
 
-const createSizeStory = (size: IButton["size"]): Story => ({
+const createSizeStory = (size: ITextarea["size"]): Story => ({
   args: {
     size,
-    children: "Button",
+    children: "TextArea",
   },
 });
 
 const createRoundedStory = (rounded: TRounded): Story => ({
   args: {
     rounded,
-    children: "Button",
+    children: "TextArea",
   },
 });
 
