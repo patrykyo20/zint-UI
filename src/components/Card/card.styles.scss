@@ -1,0 +1,64 @@
+@import "../../styles/variables.scss";
+
+.card {
+  border-radius: $rounded-md;
+
+  > img {
+    height: auto;
+    box-shadow: 1px 1px 6px color-mix(in srgb, $color-dark, transparent 75%);
+
+    @media (max-width: 425px) {
+      width: 100%;
+    }
+  }
+}
+
+.card--vertical {
+  max-width: 506px;
+}
+
+.card--horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1014px;
+}
+
+.card--product {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 430px;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 6px color-mix(in srgb, $color-dark, transparent 75%);
+}
+
+.card > img {
+  border-radius: $rounded-md $rounded-md 0 0;
+}
+
+.card__container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 1px 1px 6px color-mix(in srgb, $color-dark, transparent 75%);
+
+  > * {
+    align-self: flex-start;
+  }
+}
+
+.card__container--horizontal {
+  background-color: #ffffff;
+  max-width: 447px;
+}
+
+.card__container--product {
+  background-color: #ffffff;
+  box-shadow: none;
+
+  > * {
+    width: 100%;
+  }
+}
