@@ -1,7 +1,7 @@
 @import "../../styles/variables.scss";
 
 .button {
-  border-radius: $rounded-xs;
+  display: inline-block;
   padding: 15px 55px;
   outline: none;
   border: none;
@@ -29,27 +29,49 @@
     background-color: map-get($colors, $variant);
     @if $variant == light {
       color: map-get($colors, dark);
-      box-shadow: 1px 1px 4px color-mix(in srgb, map-get($colors, dark), transparent 75%);
+      box-shadow: 1px
+        1px
+        4px
+        color-mix(in srgb, map-get($colors, dark), transparent 75%);
     } @else {
       color: map-get($colors, light);
-      box-shadow: 1px 1px 4px color-mix(in srgb, map-get($colors, $variant), transparent 75%);
+      box-shadow: 1px
+        1px
+        4px
+        color-mix(in srgb, map-get($colors, $variant), transparent 75%);
     }
-    
+
     &:hover {
       @if $variant == light {
-        box-shadow: 1px 1px 8px color-mix(in srgb, map-get($colors, dark), transparent 50%);
+        box-shadow: 1px
+          1px
+          8px
+          color-mix(in srgb, map-get($colors, dark), transparent 50%);
       } @else {
-        box-shadow: 1px 1px 8px color-mix(in srgb, map-get($colors, $variant), transparent 50%);
+        box-shadow: 1px
+          1px
+          8px
+          color-mix(in srgb, map-get($colors, $variant), transparent 50%);
       }
       filter: brightness(105%);
     }
 
     &:focus {
       @if $variant == light {
-        outline: 2px solid color-mix(in srgb, map-get($colors, dark), transparent 50%);
+        outline: 2px
+          solid
+          color-mix(in srgb, map-get($colors, dark), transparent 50%);
       } @else {
-        outline: 2px solid color-mix(in srgb, map-get($colors, $variant), transparent 50%);
+        outline: 2px
+          solid
+          color-mix(in srgb, map-get($colors, $variant), transparent 50%);
       }
     }
+  }
+}
+
+@each $roundedVariant in $roundedVariants {
+  .button--rounded-#{$roundedVariant} {
+    border-radius: map-get($rounded, $roundedVariant);
   }
 }
