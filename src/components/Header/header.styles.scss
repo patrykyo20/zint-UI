@@ -1,5 +1,51 @@
 @import "../../styles/variables.scss";
 
 .header {
-  
+  box-sizing: border-box;
+  padding: 30px 20px;
+  width: 100%;
+
+  img {
+    max-width: 60px;
+    height: auto;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 40px 20px;
+
+    img {
+      max-width: 44px;
+    }
+
+    .list, .flex {
+      display: none;
+    }
+
+    a {
+      display: none;
+    }
+
+    .burger {
+      display: block;
+    }
+  }
+
+  @media (max-width: 475px) {
+    padding: 20px;
+  }
+
+  .nav {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+
+@each $variant in $variants {
+  .header--#{$variant} {
+    background-color: map-get($colors, $variant);
+  }
 }
