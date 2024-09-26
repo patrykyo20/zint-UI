@@ -19,8 +19,20 @@
 }
 
 @each $size in $sizes {
-  .button--#{$size} {
-    font-size: map-get($font-size-variants, $size);
+  @if $size == xs {
+    .button--#{$size} {
+      padding: 10px 35px;
+      font-size: map-get($font-size-variants, sm);
+    }
+  } @else if $size == xl {
+    .button--#{$size} {
+      font-size: map-get($font-size-variants, lg);
+      padding: 100px;
+    }
+  } @else {
+    .button--#{$size} {
+      font-size: map-get($font-size-variants, $size);
+    }
   }
 }
 
