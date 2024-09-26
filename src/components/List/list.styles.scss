@@ -1,0 +1,30 @@
+
+@import '../../styles/variables.scss';
+
+.list {
+  display: flex;
+}
+
+.list--vertical {
+  flex-direction: column;
+}
+
+.list--horizontal {
+  flex-direction: row;
+}
+
+@each $key, $value in $main-values {
+  .list--#{$key} {
+    gap: $value;
+  }
+}
+
+.list--spacing {
+  gap: 10px;
+}
+
+.list__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
