@@ -10,4 +10,4 @@ export * from "./components/Card";
 export * from "./components/Header";
 export * from "./components/List";
 export * from "./components/Nav";
-export * from "./components/Button";
+export * from "./components/Burger";
