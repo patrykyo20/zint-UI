@@ -1,0 +1,12 @@
+@import "../../styles/variables.scss";
+
+.burger__item {
+  display: block;
+  width: 40px;
+  height: 4px;
+  background-color: $color-dark;
+
+  &:not(:first-child) {
+    margin-top: 6px;
+  }
+}
