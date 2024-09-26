@@ -3,11 +3,9 @@ import IBasic from "../../types/IBasic";
 
 interface IList extends IBasic {
   children: ReactNode;
+  integration?: 'vertical' | 'horizontal';
+  spacing?: number;
   as?: "ul" | "ol";
-}
-
-export interface IListItem {
-  children: ReactNode;
 }
 
 export default IList;
