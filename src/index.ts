@@ -6,3 +6,7 @@ export * from "./components/Textarea";
 export * from "./components/Image";
 export * from "./components/Breadcrumbs";
 export * from "./components/Flex";
+export * from "./components/Card";
+export * from "./components/Header";
+export * from "./components/List";
+export * from "./components/Nav";
