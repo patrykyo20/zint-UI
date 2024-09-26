@@ -6,7 +6,7 @@ import TRounded from "../../types/TRounded";
 interface IButton extends ButtonHTMLAttributes<HTMLButtonElement>, IBasic {
   children: ReactNode;
   variant?: TVariant;
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   rounded?: TRounded;
 }
 
