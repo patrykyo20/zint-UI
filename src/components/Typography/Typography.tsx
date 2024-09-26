@@ -8,10 +8,11 @@ const Typography: FC<ITypography> = ({
   variant = "dark",
   size = "md",
   weight =  "normal",
+  className,
   ...props
 }) => {
   return (
-    <Component className={`typography typography--${variant} typography--${size} typography--${weight}`} {...props}>
+    <Component className={`typography typography--${variant} typography--${size} typography--${weight} ${className}`} {...props}>
       {children}
     </Component>
   );
